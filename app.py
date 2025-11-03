@@ -1,3 +1,11 @@
+# --- THIS MUST BE THE FIRST THING IN YOUR SCRIPT ---
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+# --- END OF FIX ---
+
+
+
 import streamlit as st
 from streamlit import spinner
 from streamlit.web.server.server import server_port_is_manually_set
