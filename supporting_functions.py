@@ -148,7 +148,7 @@ def create_chunks(transcript):
 
 # function to create embedding and store it into an vector space.
 def create_vector_store(docs):
-    embedding= GoogleGenerativeAIEmbeddings(model="models/embedding-001", transport="grpc" )
+    embedding= GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001", transport="grpc" )
     vector_store= Chroma.from_documents(docs, embedding)
     return vector_store
 
